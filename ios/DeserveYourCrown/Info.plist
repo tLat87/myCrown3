@@ -57,5 +57,8 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSPhotoLibraryUsageDescription</key>
+    <string>This app do not requires access to your photo library to allow you to upload photos.</string>
+
 </dict>
 </plist>
