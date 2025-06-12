@@ -60,9 +60,9 @@ export default function HabitTracker() {
     const handleSelect = (habit, value) => {
         setResponses((prev) => ({ ...prev, [habit]: value }));
     };
-
+    const darkMode = useSelector(state => state.theme.darkMode);
     return (
-        <ScrollView contentContainerStyle={styles.container}>
+        <ScrollView contentContainerStyle={[styles.container, !darkMode && {backgroundColor: '#a69f89'}]}>
             <View style={styles.headerRow}>
                 <Text style={styles.headerSpacer}></Text>
                 <Text style={styles.header}>Yes</Text>

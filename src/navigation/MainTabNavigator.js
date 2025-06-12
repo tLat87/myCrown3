@@ -7,6 +7,7 @@ import {useNavigation} from '@react-navigation/native';
 import HabitTracker from '../screens/HabitTracker';
 import SettingsScreen from '../screens/SettingsScreen';
 import AchievementsScreen from '../screens/AchievementsScreen';
+import {useSelector} from 'react-redux';
 
 const Tab = createBottomTabNavigator();
 
@@ -27,10 +28,12 @@ const getTabIcon = (routeName) => {
 
 const MainTabNavigator = () => {
     const navigation = useNavigation();
+    const darkMode = useSelector(state => state.theme.darkMode);
+
     return (
         <Tab.Navigator
             screenOptions={({ route }) => ({
-                headerStyle: { backgroundColor: '#1F2021', shadowColor: '#1F2021', height: 150 },
+                headerStyle: { backgroundColor: darkMode ? '#1F2021' : '#7c7667', shadowColor: '#1F2021', height: 150 },
                 headerTitleStyle: {
                     color: 'white',
                     fontFamily:'Quantico-BoldItalic',
@@ -38,7 +41,7 @@ const MainTabNavigator = () => {
                 },
                 // headerShadowVisible: false,
                 tabBarStyle: {
-                    backgroundColor: '#1F2021',
+                    backgroundColor: darkMode ? '#1F2021' : '#7c7667',
                     height: 100,
                     paddingTop: 20,
                 },

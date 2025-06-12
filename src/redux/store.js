@@ -4,10 +4,12 @@ import { persistConfig } from './persistConfig';
 import { combineReducers } from 'redux';
 import crownsReducer from './slices/crownsSlice';
 import settingsReducer from './slices/settingsSlice';
+import themeReducer from './slices/themeSlice';
 
 const rootReducer = combineReducers({
   crowns: crownsReducer,
   settings: settingsReducer,
+  theme: themeReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
-import {View, Text, TouchableOpacity, StyleSheet, Image, Modal} from 'react-native';
+import {View, Text, TouchableOpacity, StyleSheet, Image, Modal, Switch} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {toggleMusic} from '../redux/slices/settingsSlice';
 import Share from 'react-native-share';
 import {clearCrowns} from '../redux/slices/crownsSlice';
+import {toggleTheme} from '../redux/slices/themeSlice';
 
 export default function SettingsScreen() {
     const [modalVisible, setModalVisible] = useState(false);
@@ -24,14 +25,27 @@ export default function SettingsScreen() {
         }
     };
 
+    const darkMode = useSelector(state => state.theme.darkMode);
 
     return (
-        <View style={styles.container}>
+        <View style={[styles.container, !darkMode && {backgroundColor: '#a69f89'}]}>
 
             <TouchableOpacity style={styles.button} onPress={() => dispatch(toggleMusic())}>
                 <Text style={styles.buttonText}>Royal Tunes</Text>
                 <Text style={[styles.buttonText, {marginLeft: 50}]}>{musicOn ? 'ON' : 'OFF'}</Text>
             </TouchableOpacity>
+
+            <TouchableOpacity style={styles.button}>
+                <Text style={styles.buttonText}>Theme</Text>
+                <Switch
+                    value={darkMode}
+                    onValueChange={() => dispatch(toggleTheme())}
+                    trackColor={{ false: '#767577', true: '#81b0ff' }}
+                    thumbColor={darkMode ? '#f5dd4b' : '#f4f3f4'}
+                    style={{ marginLeft: 50 }}
+                />
+            </TouchableOpacity>
+
 
             <TouchableOpacity style={styles.button} onPress={() => setModalVisible(true)}>
                 <Text style={styles.buttonText}>Begin a New Reign</Text>

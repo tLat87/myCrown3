@@ -34,7 +34,7 @@ const crownImages = {
 };
 
 export default function AchievementsScreen() {
-
+    const darkMode = useSelector(state => state.theme.darkMode);
     const history = useSelector((state) => state.crowns.history);
 
     const days = [...Array(14)].map((_, i) => {
@@ -54,7 +54,7 @@ export default function AchievementsScreen() {
     }
 
     return (
-        <ScrollView contentContainerStyle={styles.scrollContainer}>
+        <ScrollView contentContainerStyle={[styles.scrollContainer, !darkMode && {backgroundColor: '#a69f89'}]}>
             <View style={styles.grid}>
                 {days.map((item, index) => (
                     <View key={index} style={styles.item}>
@@ -70,7 +70,7 @@ export default function AchievementsScreen() {
 const styles = StyleSheet.create({
     scrollContainer: {
         flexGrow: 1,
-        backgroundColor: '#1F2021',
+        backgroundColor:  '#1F2021',
         paddingTop: 50,
         paddingBottom: 40,
         alignItems: 'center',

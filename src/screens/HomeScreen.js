@@ -3,8 +3,7 @@ import { View, Text, StyleSheet, Image, SafeAreaView } from 'react-native';
 import {useSelector} from 'react-redux';
 
 function HomeScreen() {
-    // Динамические данные (пока статичные 0)
-
+    const darkMode = useSelector(state => state.theme.darkMode);
 
     // const history = useSelector((state) => state.crowns.history);
     // const goldCount = history.filter(item => item.crownType === 'gold').length;
@@ -12,7 +11,7 @@ function HomeScreen() {
     // const brownCount = history.filter(item => item.crownType === 'brown').length;
 
     return (
-        <SafeAreaView style={styles.container}>
+        <SafeAreaView style={[styles.container, !darkMode && {backgroundColor: '#a69f89'}]}>
             {/* Первая секция */}
             <Text style={styles.text}>
                 Majesty, your crown sparkled{' '}

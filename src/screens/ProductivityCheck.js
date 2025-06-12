@@ -1,10 +1,12 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, SafeAreaView, Image } from 'react-native';
+import {useSelector} from 'react-redux';
 
 export default function ProductivityCheck({navigation}) {
+    const darkMode = useSelector(state => state.theme.darkMode);
 
     return (
-        <SafeAreaView style={styles.container}>
+        <SafeAreaView style={[styles.container, !darkMode && {backgroundColor: '#a69f89'}]}>
             <View style={styles.iconContainer}>
                 <Image
                     source={require('../assets/img/4c58e540460e5f9de360e844a54f5827f876d588.png')} // замените на свой путь к иконке
