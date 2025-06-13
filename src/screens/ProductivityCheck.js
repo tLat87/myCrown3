@@ -50,11 +50,10 @@ const styles = StyleSheet.create({
     icon: {
         width: 400,
         height: 450,
-        tintColor: '#C7A553', // золотой
+        tintColor: '#ff9900', // золотой
     },
     card: {
         backgroundColor: '#C7A553',
-        borderRadius: 10,
         padding: 20,
         alignItems: 'center',
         borderWidth: 2,
@@ -73,15 +72,15 @@ const styles = StyleSheet.create({
         gap: 10,
     },
     button: {
-        backgroundColor: '#94A98D',
+        backgroundColor: '#dae6a2',
         paddingVertical: 10,
         paddingHorizontal: 25,
-        borderRadius: 10,
         marginHorizontal: 5,
     },
     buttonText: {
         color: '#000',
         fontWeight: 'bold',
         fontSize: 24,
+        fontFamily:'Quantico-BoldItalic',
     },
 });

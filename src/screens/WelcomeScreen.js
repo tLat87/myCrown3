@@ -63,12 +63,14 @@ const styles = StyleSheet.create({
         color: '#ffffff',
         fontSize: 22,
         fontWeight: '700',
+        fontFamily:'Quantico-BoldItalic',
         textAlign: 'center',
         marginBottom: 20,
     },
     description: {
         color: '#cccccc',
         fontSize: 16,
+        fontFamily:'Quantico-BoldItalic',
         textAlign: 'center',
         lineHeight: 24,
         marginBottom: 30,
@@ -81,7 +83,6 @@ const styles = StyleSheet.create({
     },
     button: {
         backgroundColor: '#D2B161',
-        borderRadius: 8,
         borderColor: '#FFFFFF',
         borderWidth: 2,
         paddingVertical: 12,
@@ -90,6 +91,7 @@ const styles = StyleSheet.create({
     buttonText: {
         color: '#000000',
         fontWeight: 'bold',
+        fontFamily:'Quantico-BoldItalic',
         fontSize: 26,
     },
 });

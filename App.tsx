@@ -10,6 +10,7 @@ import MainTabNavigator from "./src/navigation/MainTabNavigator";
 import WelcomeScreen from "./src/screens/WelcomeScreen";
 import ProductivityCheck from "./src/screens/ProductivityCheck";
 import BackgroundMusic from "./src/component/BackgroundMusic";
+import HeroInfoScreen from "./src/screens/HeroInfoScreen.tsx";
 
 
 const Stack = createStackNavigator();
@@ -41,6 +42,12 @@ export default function App() {
                         <Stack.Screen name="Welcome" component={WelcomeScreen} options={{ headerShown: false }} />
                         <Stack.Screen name="MainTab" component={MainTabNavigator} options={{ headerShown: false }} />
                         <Stack.Screen name="ProductivityCheck" component={ProductivityCheck} options={{ headerShown: false }} />
+
+                        <Stack.Screen
+                            name="HeroInfoScreen"
+                            component={HeroInfoScreen}
+                            options={{ headerShown: false }}
+                        />
 
                     </Stack.Navigator>
                 </NavigationContainer>

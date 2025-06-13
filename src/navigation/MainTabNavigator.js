@@ -8,6 +8,10 @@ import HabitTracker from '../screens/HabitTracker';
 import SettingsScreen from '../screens/SettingsScreen';
 import AchievementsScreen from '../screens/AchievementsScreen';
 import {useSelector} from 'react-redux';
+import SearchScreen from '../screens/SearchScreen';
+import FavoritesScreen from '../screens/FavoritesScreen';
+import FavSvg from '../assets/svg/FavSvg';
+import SearchSvg from '../assets/svg/SearchSvg';
 
 const Tab = createBottomTabNavigator();
 
@@ -78,6 +82,19 @@ const MainTabNavigator = () => {
                     headerTitle: 'Achievements',
                 }}
             />
+
+            <Tab.Screen name="Search" component={SearchScreen} options={{headerShown: false,
+                tabBarIcon: () => {
+                    return <SearchSvg color='#afaea3' width={54} height={54} />;
+                },
+                tabBarLabel: '',
+            }}/>
+            <Tab.Screen name="Favorites" component={FavoritesScreen} options={{headerShown: false,
+                tabBarIcon: () => {
+                    return <FavSvg color='#afaea3' width={54} height={54} />;
+                },
+                tabBarLabel: '',
+            }} />
 
             <Tab.Screen
                 name="SettingsScreen"
