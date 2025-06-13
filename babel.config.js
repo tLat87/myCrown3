@@ -9,5 +9,6 @@ module.exports = {
       safe: false,
       allowUndefined: true
     }]
-  ]
+  ],
+  exclude: /node_modules/
 };
