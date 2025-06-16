@@ -17,11 +17,11 @@ function HomeScreen() {
                 Majesty, your crown sparkled{' '}
                 <Text style={styles.highlight}>{0}</Text> days this week.
             </Text>
-            <Image
-                source={require('../assets/img/33f646d30889b86451d4e636dfe5d2e1cd97a930.png')} // замените на путь к иконке короны
-                style={styles.icon}
-                resizeMode="contain"
-            />
+            {/*<Image*/}
+            {/*    source={require('../assets/img/33f646d30889b86451d4e636dfe5d2e1cd97a930.png')} // замените на путь к иконке короны*/}
+            {/*    style={styles.icon}*/}
+            {/*    resizeMode="contain"*/}
+            {/*/>*/}
 
             {/* Вторая секция */}
             <Text style={styles.text}>

@@ -37,28 +37,42 @@ const MainTabNavigator = () => {
     return (
         <Tab.Navigator
             screenOptions={({ route }) => ({
-                headerStyle: { backgroundColor: darkMode ? '#1F2021' : '#7c7667', shadowColor: '#1F2021', height: 150 },
+                headerStyle: {
+                    backgroundColor: darkMode ? '#1F2021' : '#7c7667',
+                    shadowColor: '#1F2021',
+                    height: 150,
+                },
                 headerTitleStyle: {
                     color: 'white',
-                    fontFamily:'Quantico-BoldItalic',
+                    fontFamily: 'Quantico-BoldItalic',
                     fontSize: 40,
                 },
-                // headerShadowVisible: false,
                 tabBarStyle: {
-                    backgroundColor: darkMode ? '#1F2021' : '#7c7667',
-                    height: 100,
+                    position: 'absolute',
+                    bottom: 30,
+                    width: '90%',
+                    marginLeft: '5%',
+                    backgroundColor: darkMode ? '#4a4a4a' : '#7c7667',
+                    height: 80,
                     paddingTop: 20,
+                    // color: '#1F2021',
+                    borderRadius: 30,
+                    shadowColor: '#000',
+                    shadowOffset: { width: 0, height: 10 },
+                    shadowOpacity: 0.1,
+                    shadowRadius: 10,
+                    elevation: 10, // for Android
                 },
                 tabBarIcon: () => (
                     <Image
                         source={getTabIcon(route.name)}
-                        style={{ }}
+                        style={{ width: 40, height: 40 }}
                     />
                 ),
             })}
         >
 
-            <Tab.Screen
+        <Tab.Screen
                 name="Home"
                 component={HomeScreen}
                 options={{
@@ -85,13 +99,13 @@ const MainTabNavigator = () => {
 
             <Tab.Screen name="Search" component={SearchScreen} options={{headerShown: false,
                 tabBarIcon: () => {
-                    return <SearchSvg color='#afaea3' width={54} height={54} />;
+                    return <SearchSvg color='#afaea3' width={36} height={36} />;
                 },
                 tabBarLabel: '',
             }}/>
             <Tab.Screen name="Favorites" component={FavoritesScreen} options={{headerShown: false,
                 tabBarIcon: () => {
-                    return <FavSvg color='#afaea3' width={54} height={54} />;
+                    return <FavSvg color='#afaea3' width={36} height={36} />;
                 },
                 tabBarLabel: '',
             }} />

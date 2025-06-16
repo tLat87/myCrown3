@@ -62,7 +62,7 @@ export default function HabitTracker() {
     };
     const darkMode = useSelector(state => state.theme.darkMode);
     return (
-        <ScrollView contentContainerStyle={[styles.container, !darkMode && {backgroundColor: '#a69f89'}]}>
+        <ScrollView style={[styles.container, !darkMode && {backgroundColor: '#a69f89'}]}>
             <View style={styles.headerRow}>
                 <Text style={styles.headerSpacer}></Text>
                 <Text style={styles.header}>Yes</Text>
@@ -128,12 +128,13 @@ const styles = StyleSheet.create({
         padding: 20,
         flex: 1,
         backgroundColor: '#1F2021',
-        alignItems: 'center',
+        // alignItems: 'center',
     },
     headerRow: {
         flexDirection: 'row',
         alignItems: 'center',
         marginBottom: 10,
+        marginLeft: 30
     },
     modalOverlay: {
         flex: 1,

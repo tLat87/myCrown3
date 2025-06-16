@@ -54,7 +54,7 @@ export default function AchievementsScreen() {
     }
 
     return (
-        <ScrollView contentContainerStyle={[styles.scrollContainer, !darkMode && {backgroundColor: '#a69f89'}]}>
+        <ScrollView style={[styles.scrollContainer, !darkMode && {backgroundColor: '#a69f89'}]}>
             <View style={styles.grid}>
                 {days.map((item, index) => (
                     <View key={index} style={styles.item}>
@@ -63,6 +63,7 @@ export default function AchievementsScreen() {
                     </View>
                 ))}
             </View>
+            <View style={{marginBottom: 100}}/>
         </ScrollView>
     );
 }
@@ -73,7 +74,7 @@ const styles = StyleSheet.create({
         backgroundColor:  '#1F2021',
         paddingTop: 50,
         paddingBottom: 40,
-        alignItems: 'center',
+        // alignItems: 'center',
     },
     grid: {
         flexDirection: 'row',

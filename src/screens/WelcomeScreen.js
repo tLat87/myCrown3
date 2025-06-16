@@ -6,20 +6,22 @@ const { width } = Dimensions.get('window');
 const WelcomeScreens = ({ navigation }) => {
     const screens = [
         {
-            title: 'Welcome to Deserve Your Crown',
-            description: 'Build your personal legacy by mastering your daily habits.\nEach day, deserve your crown by making small but powerful choices.\nTrack your progress, celebrate your wins, and stay loyal to your goals.',
+            title: 'Welcome to Your Journey',
+            description: 'Start building the life you want by focusing on daily habits.\nMake small, consistent choices that lead to real growth.\nTrack your progress and celebrate wins along the way.',
             button: 'Next',
             icon: require('../assets/img/7195566a053642b16deae89621d18c43c9209736.png'),
         },
         {
-            title: 'Achieve More, Rule Stronger',
-            description: 'Get unique achievements for your daily victories:\n• Keep your crown shining by making positive choices\n• Unlock milestones for streaks and good habits\n• Celebrate every step toward becoming your best self',
+            title: 'Stay Motivated, Grow Daily',
+            description: 'Earn achievements for your efforts:\n• Build streaks by staying consistent\n• Unlock goals as you form better habits\n• Enjoy the process of becoming your best self',
             button: 'Next',
-            icon: require('../assets/img/91ca4d1199817f7d5d86b370624e194196d0ddfe.png'),
+            // icon: require('../assets/img/91ca4d1199817f7d5d86b370624e194196d0ddfe.png'),
+            icon: null,
+
         },
         {
-            title: 'Set Your Crown Standards',
-            description: 'Let\'s personalize your journey.\nWe\'ll ask a few quick questions to tailor the habits you want to track.\nOnly relevant habits will be included — no distractions, just your path to greatness.',
+            title: 'Personalize Your Experience',
+            description: 'Answer a few quick questions to customize your habit tracker.\nWe’ll focus only on what matters to you — no clutter, just progress.',
             button: 'Start Survey',
             icon: require('../assets/img/b571355ba07c0707d17e7d1b9377b5f85c8d5a64.png'),
         }
@@ -54,7 +56,7 @@ export default WelcomeScreens;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#1a1a1a',
+        backgroundColor: '#3a3a3a',
         padding: 20,
         alignItems: 'center',
         justifyContent: 'center',

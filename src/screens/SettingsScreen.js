@@ -30,10 +30,6 @@ export default function SettingsScreen() {
     return (
         <View style={[styles.container, !darkMode && {backgroundColor: '#a69f89'}]}>
 
-            <TouchableOpacity style={styles.button} onPress={() => dispatch(toggleMusic())}>
-                <Text style={styles.buttonText}>Royal Tunes</Text>
-                <Text style={[styles.buttonText, {marginLeft: 50}]}>{musicOn ? 'ON' : 'OFF'}</Text>
-            </TouchableOpacity>
 
             <TouchableOpacity style={styles.button}>
                 <Text style={styles.buttonText}>Theme</Text>
