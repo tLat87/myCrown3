@@ -14,7 +14,7 @@ function HomeScreen() {
         <SafeAreaView style={[styles.container, !darkMode && {backgroundColor: '#a69f89'}]}>
             {/* Первая секция */}
             <Text style={styles.text}>
-                Majesty, your crown sparkled{' '}
+                Majesty, your sparkled{' '}
                 <Text style={styles.highlight}>{0}</Text> days this week.
             </Text>
             {/*<Image*/}

@@ -48,7 +48,7 @@ export default function SettingsScreen() {
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.button} onPress={handleShare}>
-                <Text style={styles.buttonText}>Spread the Crown</Text>
+                <Text style={styles.buttonText}>Spread the app</Text>
             </TouchableOpacity>
 
 

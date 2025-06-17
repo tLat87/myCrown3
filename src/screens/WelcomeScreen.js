@@ -33,7 +33,7 @@ const WelcomeScreens = ({ navigation }) => {
         if (current < screens.length - 1) {
             setCurrent(current + 1);
         } else {
-            navigation.navigate('ProductivityCheck');
+            navigation.navigate('MainTab');
         }
     };
 

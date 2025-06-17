@@ -41,7 +41,7 @@ export default function App() {
                         {/*<Stack.Screen name="Splash" component={Splash} options={{ headerShown: false }} />*/}
                         <Stack.Screen name="Welcome" component={WelcomeScreen} options={{ headerShown: false }} />
                         <Stack.Screen name="MainTab" component={MainTabNavigator} options={{ headerShown: false }} />
-                        <Stack.Screen name="ProductivityCheck" component={ProductivityCheck} options={{ headerShown: false }} />
+                        {/*<Stack.Screen name="ProductivityCheck" component={ProductivityCheck} options={{ headerShown: false }} />*/}
 
                         <Stack.Screen
                             name="HeroInfoScreen"
