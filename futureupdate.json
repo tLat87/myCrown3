@@ -1,0 +1,64 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "category": "Science",
+      "title": "How Does Gravity Work?",
+      "text": "Gravity is a force that pulls objects toward each other. It keeps planets in orbit around the sun and gives weight to physical objects on Earth. Einstein described it as the curvature of space-time."
+    },
+    {
+      "id": 2,
+      "category": "Food",
+      "title": "The Perfect Pancake Recipe",
+      "text": "To make fluffy pancakes, use buttermilk, eggs, flour, and a pinch of baking powder. Mix until just combined, and cook on medium heat until golden brown. Serve with fresh berries and maple syrup."
+    },
+    {
+      "id": 3,
+      "category": "Travel",
+      "title": "Discovering the Northern Lights",
+      "text": "The Northern Lights are a spectacular natural phenomenon visible in the Arctic Circle. The best time to see them is between November and March in places like Norway, Iceland, and Finland."
+    },
+    {
+      "id": 4,
+      "category": "Technology",
+      "title": "Understanding Blockchain",
+      "text": "Blockchain is a decentralized database where data is stored in blocks and chained together. It underpins cryptocurrencies like Bitcoin and has applications in finance, healthcare, and logistics."
+    },
+    {
+      "id": 5,
+      "category": "Psychology",
+      "title": "What Is the Dunning-Kruger Effect?",
+      "text": "The Dunning-Kruger effect is a cognitive bias where people with low ability overestimate their competence. It explains why beginners sometimes feel more confident than experts."
+    },
+    {
+      "id": 6,
+      "category": "Art",
+      "title": "Impressionism: A Revolution in Painting",
+      "text": "Impressionism emerged in France in the 19th century. Artists like Monet and Renoir focused on light, color, and fleeting moments rather than precise details, reshaping the art world."
+    },
+    {
+      "id": 7,
+      "category": "History",
+      "title": "The Fall of the Roman Empire",
+      "text": "The Western Roman Empire collapsed in 476 AD due to economic troubles, military losses, and internal decay. This event marked the beginning of the Middle Ages in Europe."
+    },
+    {
+      "id": 8,
+      "category": "Motivation",
+      "title": "Building Discipline Through Daily Habits",
+      "text": "Discipline is built by starting small: wake up at the same time daily, plan your tasks, avoid distractions. Consistency is more important than intensity when forming habits."
+    },
+    {
+      "id": 9,
+      "category": "Philosophy",
+      "title": "Stoicism in Everyday Life",
+      "text": "Stoicism teaches us to focus on what we can control and to accept what we cannot. Practicing gratitude, emotional resilience, and mindfulness are key elements of Stoic philosophy."
+    },
+    {
+      "id": 10,
+      "category": "Nature",
+      "title": "Fascinating Facts About Jellyfish",
+      "text": "Some jellyfish have no brain or heart, yet they navigate the oceans with sensory structures. One species, Turritopsis dohrnii, is known for its ability to potentially live forever."
+    }
+  ]
+}
