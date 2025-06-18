@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, TouchableOpacity, StyleSheet, Image, Modal, Switch} from 'react-native';
+import {View, Text, TouchableOpacity, StyleSheet, Image, Modal, Switch, ImageBackground} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {toggleMusic} from '../redux/slices/settingsSlice';
 import Share from 'react-native-share';
@@ -16,8 +16,7 @@ export default function SettingsScreen() {
         try {
             const shareOptions = {
                 title: 'My Royal Streak',
-                message: 'Join me in tracking noble habits and earning daily crowns! 👑',
-                // url: 'https://your-app-link.com', // можно заменить или удалить
+                message: 'Join me in tracking noble habits and earning daily!',
             };
             await Share.open(shareOptions);
         } catch (error) {
@@ -28,8 +27,7 @@ export default function SettingsScreen() {
     const darkMode = useSelector(state => state.theme.darkMode);
 
     return (
-        <View style={[styles.container, !darkMode && {backgroundColor: '#a69f89'}]}>
-
+        <ImageBackground source={require('../assets/img/HD-wallpaper-black-crown-journal-cool-for-witchy-black-dark-crown.jpg')} style={styles.container}>
 
             <TouchableOpacity style={styles.button}>
                 <Text style={styles.buttonText}>Theme</Text>
@@ -74,7 +72,7 @@ export default function SettingsScreen() {
                     </View>
                 </View>
             </Modal>
-        </View>
+        </ImageBackground>
     );
 }
 

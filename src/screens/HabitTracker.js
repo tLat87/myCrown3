@@ -4,7 +4,7 @@ import {
     Text,
     TouchableOpacity,
     StyleSheet,
-    ScrollView, Alert, Image, Modal,
+    ScrollView, Alert, Image, Modal, ImageBackground,
 } from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {addCrownForToday} from '../redux/slices/crownsSlice';
@@ -62,7 +62,9 @@ export default function HabitTracker() {
     };
     const darkMode = useSelector(state => state.theme.darkMode);
     return (
-        <ScrollView style={[styles.container, !darkMode && {backgroundColor: '#a69f89'}]}>
+        <ImageBackground source={require('../assets/img/HD-wallpaper-black-crown-journal-cool-for-witchy-black-dark-crown.jpg')} style={styles.container}>
+
+        <ScrollView >
             <View style={styles.headerRow}>
                 <Text style={styles.headerSpacer}></Text>
                 <Text style={styles.header}>Yes</Text>
@@ -120,6 +122,7 @@ export default function HabitTracker() {
             </Modal>
 
         </ScrollView>
+        </ImageBackground>
     );
 }
 

@@ -145,8 +145,8 @@ const SearchScreen = () => {
                 scrollEventThrottle={16}
             >
                 <View style={styles.header}>
-                    <Text style={styles.location}>Which crown suits</Text>
-                    <Text style={[styles.location, styles.subtitle]}>which hero?</Text>
+                    {/*<Text style={styles.location}>Which crown suits</Text>*/}
+                    <Text style={[styles.location, styles.subtitle]}>Find hero</Text>
                 </View>
 
                 <View style={styles.inputWrapper}>

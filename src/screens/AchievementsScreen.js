@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, Dimensions, ScrollView } from 'react-native';
+import {View, Text, StyleSheet, Image, Dimensions, ScrollView, ImageBackground} from 'react-native';
 import {useSelector} from 'react-redux';
 
 const { width } = Dimensions.get('window');
@@ -54,7 +54,9 @@ export default function AchievementsScreen() {
     }
 
     return (
-        <ScrollView style={[styles.scrollContainer, !darkMode && {backgroundColor: '#a69f89'}]}>
+        <ImageBackground source={require('../assets/img/HD-wallpaper-black-crown-journal-cool-for-witchy-black-dark-crown.jpg')} style={styles.scrollContainer}>
+
+        <ScrollView >
             <View style={styles.grid}>
                 {days.map((item, index) => (
                     <View key={index} style={styles.item}>
@@ -65,6 +67,7 @@ export default function AchievementsScreen() {
             </View>
             <View style={{marginBottom: 100}}/>
         </ScrollView>
+        </ImageBackground>
     );
 }
 

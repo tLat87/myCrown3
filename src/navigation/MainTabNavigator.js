@@ -72,14 +72,14 @@ const MainTabNavigator = () => {
             })}
         >
 
-        <Tab.Screen
-                name="Home"
-                component={HomeScreen}
-                options={{
-                    tabBarLabel: '',
-                    headerTitle: 'Home',
-                }}
-            />
+        {/*<Tab.Screen*/}
+        {/*        name="Home"*/}
+        {/*        component={HomeScreen}*/}
+        {/*        options={{*/}
+        {/*            tabBarLabel: '',*/}
+        {/*            headerTitle: 'Home',*/}
+        {/*        }}*/}
+        {/*    />*/}
             <Tab.Screen
                 name="HabitTracker"
                 component={HabitTracker}
