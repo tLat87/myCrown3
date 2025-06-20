@@ -97,18 +97,18 @@ const MainTabNavigator = () => {
                 }}
             />
 
-            <Tab.Screen name="Search" component={SearchScreen} options={{headerShown: false,
-                tabBarIcon: () => {
-                    return <SearchSvg color='#afaea3' width={36} height={36} />;
-                },
-                tabBarLabel: '',
-            }}/>
-            <Tab.Screen name="Favorites" component={FavoritesScreen} options={{headerShown: false,
-                tabBarIcon: () => {
-                    return <FavSvg color='#afaea3' width={36} height={36} />;
-                },
-                tabBarLabel: '',
-            }} />
+            {/*<Tab.Screen name="Search" component={SearchScreen} options={{headerShown: false,*/}
+            {/*    tabBarIcon: () => {*/}
+            {/*        return <SearchSvg color='#afaea3' width={36} height={36} />;*/}
+            {/*    },*/}
+            {/*    tabBarLabel: '',*/}
+            {/*}}/>*/}
+            {/*<Tab.Screen name="Favorites" component={FavoritesScreen} options={{headerShown: false,*/}
+            {/*    tabBarIcon: () => {*/}
+            {/*        return <FavSvg color='#afaea3' width={36} height={36} />;*/}
+            {/*    },*/}
+            {/*    tabBarLabel: '',*/}
+            {/*}} />*/}
 
             <Tab.Screen
                 name="SettingsScreen"
