@@ -121,7 +121,9 @@ export default function HabitTracker() {
                 </View>
             </Modal>
 
+            <View style={{marginBottom: 130}}/>
         </ScrollView>
+
         </ImageBackground>
     );
 }

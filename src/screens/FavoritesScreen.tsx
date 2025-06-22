@@ -4,7 +4,7 @@ import {
     Text,
     StyleSheet,
     ScrollView,
-    Image,
+    Image, ImageBackground,
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect } from '@react-navigation/native';
@@ -55,36 +55,36 @@ const FavoritesScreen = () => {
 
     const renderEmptyState = () => (
         <View style={styles.emptyWrapper}>
-            <Image
-                source={require('../assets/img/klipartz.com.png')}
-                style={styles.emptyImage}
-            />
+
             <Text style={styles.emptyText}>No saved heroes yet...</Text>
         </View>
     );
 
     return (
-        <ScrollView style={styles.container} scrollEnabled={!loading}>
-            {renderHeader()}
+        <ImageBackground source={require('../assets/img/HD-wallpaper-black-crown-journal-cool-for-witchy-black-dark-crown.jpg')} style={styles.container}>
+            <ScrollView style={styles.container} scrollEnabled={!loading}>
+                {renderHeader()}
 
-            {loading ? (
-                <>
-                    <HeroCardSkeleton />
-                    <HeroCardSkeleton />
-                    <HeroCardSkeleton />
-                </>
-            ) : heroes.length === 0 ? (
-                renderEmptyState()
-            ) : (
-                heroes.map(hero => <HeroCard key={hero.id} data={hero} />)
-            )}
-        </ScrollView>
+                {loading ? (
+                    <>
+                        <HeroCardSkeleton />
+                        <HeroCardSkeleton />
+                        <HeroCardSkeleton />
+                    </>
+                ) : heroes.length === 0 ? (
+                    renderEmptyState()
+                ) : (
+                    heroes.map(hero => <HeroCard key={hero.id} data={hero} />)
+                )}
+            </ScrollView>
+        </ImageBackground>
+
     );
 };
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: Colors.background,
+        // backgroundColor: Colors.background,
         flex: 1,
     },
     header: {
@@ -119,9 +119,9 @@ const styles = StyleSheet.create({
     },
     emptyText: {
         marginTop: 20,
-        color: '#000',
+        color: '#fff',
         textAlign: 'center',
-        fontSize: 18,
+        fontSize: 28,
         fontWeight: '600',
     },
 });

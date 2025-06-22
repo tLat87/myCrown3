@@ -6,7 +6,7 @@ import {
     TextInput,
     ScrollView,
     TouchableOpacity,
-    Image,
+    Image, ImageBackground,
 } from 'react-native';
 import {searchHeroesByName} from "../api/superheroApi.ts";
 import FilterSvg from "../assets/svg/FilterSvg.tsx";
@@ -122,10 +122,9 @@ const SearchScreen = () => {
         return (
             <View style={{ position: 'relative', height: 500 }}>
                 {query.trim() === '' && (
-                    <Image
-                        source={require('../assets/img/pngegg.png')}
-                        style={{ position: 'absolute', right: '20%', top: 20, width: 200, height: 200 }}
-                    />
+                    <Text style={[styles.location, { marginTop: 250, color: '#fff', textAlign: 'center' }]}>
+                        Start typing to your search
+                    </Text>
                 )}
                 <Text style={[styles.location, { marginTop: 250, color: '#000', textAlign: 'center' }]}>
                     {message}
@@ -135,8 +134,9 @@ const SearchScreen = () => {
     };
 
     return (
-        <View style={{ flex: 1 }}>
-            <ScrollView
+        <ImageBackground source={require('../assets/img/HD-wallpaper-black-crown-journal-cool-for-witchy-black-dark-crown.jpg')} style={styles.container}>
+
+        <ScrollView
                 ref={scrollRef}
                 style={styles.container}
                 showsVerticalScrollIndicator={false}
@@ -144,6 +144,8 @@ const SearchScreen = () => {
                 onScroll={handleScroll}
                 scrollEventThrottle={16}
             >
+
+
                 <View style={styles.header}>
                     {/*<Text style={styles.location}>Which crown suits</Text>*/}
                     <Text style={[styles.location, styles.subtitle]}>Find hero</Text>
@@ -178,6 +180,7 @@ const SearchScreen = () => {
                         )}
                     </>
                 )}
+
             </ScrollView>
 
             {showScrollTop && (
@@ -193,13 +196,13 @@ const SearchScreen = () => {
                 onApply={applyFilters}
                 onToggle={toggleFilter}
             />
-        </View>
+        </ImageBackground>
     );
 };
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: Colors.background,
+        // backgroundColor: Colors.background,
         flex: 1,
     },
     header: {
